@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SomeBuddy — Design your perfect buddy</title>
+    <meta
+      name="description"
+      content="SomeBuddy lets you create AI characters, chat naturally, and share photos. Flirt, story, expert, or just hang out."
+    />
+    <link rel="icon" href="/assets/icon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/">
+          <img src="/assets/icon.png" alt="" width="36" height="36" />
+          SomeBuddy
+        </a>
+        <nav class="nav">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/support/">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <img class="hero-logo" src="/assets/icon.png" alt="SomeBuddy app icon" />
+          <h1>Meet your next <span class="gradient-text">buddy</span></h1>
+          <p>
+            Create unique characters, chat in your language, and get selfies when the moment feels
+            right. Built for fun — flirt, story, expert advice, or casual conversation.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#download">Coming to App Store &amp; Google Play</a>
+            <a class="btn btn-secondary" href="/support/">Contact support</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-inner">
+        <div class="features">
+          <article class="feature">
+            <h3>Create your buddy</h3>
+            <p>Pick personality, purpose, and look — realistic, anime, or comic style.</p>
+          </article>
+          <article class="feature">
+            <h3>Chat that feels human</h3>
+            <p>Short, natural replies in your language. No robotic assistant tone.</p>
+          </article>
+          <article class="feature">
+            <h3>Photos in chat</h3>
+            <p>Characters can send selfies and scenes when you ask — powered by credits.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="download" class="hero-inner" style="padding-bottom: 4rem; text-align: center">
+        <p style="color: var(--muted); max-width: 520px; margin: 0 auto">
+          SomeBuddy is published by Monovi. For privacy, terms, and account help, see the links
+          below.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Use</a>
+          <a href="/support/">Support</a>
+          <a href="/account-deletion/">Account Deletion</a>
+        </div>
+        <p>&copy; <span id="y"></span> Monovi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
