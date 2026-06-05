@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Account Deletion — SomeBuddy</title>
+    <meta name="theme-color" content="#08070F" />
     <link rel="icon" href="/assets/icon.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -73,14 +74,24 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <div class="footer-links">
-          <a href="/">Home</a>
-          <a href="/privacy/">Privacy Policy</a>
-          <a href="/terms/">Terms of Use</a>
-          <a href="/support/">Support</a>
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="/assets/icon.png" alt="" width="28" height="28" />
+            SomeBuddy
+          </div>
+          <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/support/">Support</a>
+            <a href="/account-deletion/">Account Deletion</a>
+          </div>
         </div>
-        <p>&copy; Monovi</p>
+        <p class="footer-copy">&copy; <span id="y"></span> Monovi · <a href="mailto:contact@monovi.com.tr">contact@monovi.com.tr</a></p>
       </div>
     </footer>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
