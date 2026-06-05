@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SomeBuddy — Character</title>
+    <meta name="theme-color" content="#08070F" />
+    <link rel="icon" href="/assets/icon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/">
+          <img src="/assets/icon.png" alt="" width="38" height="38" />
+          SomeBuddy
+        </a>
+        <nav class="nav">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/support/">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <div class="page-wrap character-share">
+        <img class="character-share-icon" src="/assets/icon.png" alt="" width="88" height="88" />
+        <h1 id="title">Open in SomeBuddy</h1>
+        <p class="meta" id="subtitle">This link opens a character profile in the SomeBuddy app.</p>
+        <div class="cta-row" style="margin-top: 1.5rem">
+          <a class="btn btn-primary" id="open-app" href="#">Open app</a>
+          <a class="btn btn-secondary" href="/support/">Get the app</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="/assets/icon.png" alt="" width="28" height="28" />
+            SomeBuddy
+          </div>
+          <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/support/">Support</a>
+          </div>
+        </div>
+        <p class="footer-copy">&copy; <span id="y"></span> Monovi · <a href="mailto:contact@monovi.com.tr">contact@monovi.com.tr</a></p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var id = params.get('id') || '';
+        var deep = id ? 'somebuddy://karakter/' + id : 'somebuddy://';
+        document.getElementById('y').textContent = new Date().getFullYear();
+        var open = document.getElementById('open-app');
+        open.href = deep;
+        if (!id) {
+          document.getElementById('subtitle').textContent = 'Missing character id in link.';
+          return;
+        }
+        open.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.location.href = deep;
+          setTimeout(function () {
+            window.location.href = '/support/';
+          }, 1200);
+        });
+      })();
+    </script>
+  </body>
+</html>

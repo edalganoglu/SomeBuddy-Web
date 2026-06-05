@@ -576,3 +576,16 @@ main,
     padding-top: 6rem;
   }
 }
+
+.character-share {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-share-icon {
+  border-radius: 22px;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-glow);
+}
