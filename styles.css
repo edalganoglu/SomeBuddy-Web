@@ -157,12 +157,20 @@ main,
 /* —— Landing hero —— */
 .hero {
   padding: 5rem 0 2rem;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .hero-glow {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1.5rem;
 }
 
@@ -189,7 +197,7 @@ main,
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 0.9rem;
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.25rem;
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 600;
