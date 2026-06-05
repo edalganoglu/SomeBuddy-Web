@@ -16,7 +16,7 @@ Marketing site and legal pages for the SomeBuddy mobile app.
 
 1. Import this repo in [Vercel](https://vercel.com/new)
 2. Framework preset: **Other** (static)
-3. Deploy — default URL: `somebuddy-web.vercel.app` (or rename project to `somebuddy`)
+3. Deploy — production URL: `https://somebuddy.vercel.app`
 4. Optional: add custom domain `somebuddy.co` in Vercel → Domains
 
 ## Local preview
@@ -30,7 +30,7 @@ npx serve .
 Set in the mobile app `.env`:
 
 ```
-EXPO_PUBLIC_WEB_BASE_URL=https://your-vercel-url.vercel.app
+EXPO_PUBLIC_WEB_BASE_URL=https://somebuddy.vercel.app
 ```
 
 Legal links in the app read from this base URL.
